@@ -23,6 +23,9 @@
   + Fondamenti di programmazione
   + Python
   + Versioning e Documentazione
+  + Programmazione avanza
+    + Macchine a stati finiti 
+    + web framework
 
 
 
