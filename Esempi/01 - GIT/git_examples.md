@@ -34,7 +34,7 @@ $ git switch main
 $ touch test3.txt
 $ git add *
 $ git commit -m "Third Commit"
-$git push
+ git push
 ```
 
 5. Aggiorniamo il file test.txt sulla branch *testing*
