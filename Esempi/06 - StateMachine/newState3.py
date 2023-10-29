@@ -177,7 +177,7 @@ class StateMachine:
     def __init__(self, name, initialState, tranTable):
         self.name = name
         self.state = initialState
-        self.transitionTable = tranTable
+        self.transitionTable:list = tranTable
 
     @property
     def name(self):
@@ -369,10 +369,17 @@ def interact(machine: StateMachine, timer: Clock, fName: str = 'cmd.csv',
     console.print(f"StateMachine - Interactive Mode",
                   style="bold red on yellow", justify="center")
     console.rule(style='green')
+    admitted= [*machine.transitionTable.keys(),*machine.PE.transitionTable.keys()]
     while True:
         cmd = Prompt.ask('command', console=console)
         cmd = cmd.strip().upper()
         if cmd.startswith('N'):
+            
+            if not cmd in admitted:
+                message=f"The command {cmd} is not a valid command"
+                log.error(message)
+                console.print(f"{MSG.ERROR}{message}")
+                continue
             log.info("TM(1,1)")
             log.info(
                 f"Executing {cmd}: {machine.cmd_description(cmd)}")
