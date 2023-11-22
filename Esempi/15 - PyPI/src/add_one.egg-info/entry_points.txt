@@ -1,2 +1,0 @@
-[console_scripts]
-add_one = add_one.example:add_one
