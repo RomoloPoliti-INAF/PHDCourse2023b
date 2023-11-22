@@ -1,0 +1,3 @@
+[submodule "Esempi/15 - PyPI"]
+	path = Esempi/15 - PyPI
+	url = git@github.com:RomoloPoliti-INAF/TestRepo2.git
